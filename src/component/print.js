@@ -36,7 +36,7 @@ export const PrintComponent = () => {
 
   const reactToPrintContent = React.useCallback(() => {
     return componentRef.current;
-  }, [componentRef.current]);
+  }, [componentRef]);
 
   const handlePrint = useReactToPrint({
     content: reactToPrintContent,
@@ -54,7 +54,7 @@ export const PrintComponent = () => {
     ) {
       onBeforeGetContentResolve.current();
     }
-  }, [onBeforeGetContentResolve.current, text]);
+  }, [onBeforeGetContentResolve, text]);
 
   return (
     <div>
